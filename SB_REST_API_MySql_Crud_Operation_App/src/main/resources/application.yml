@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    password: Balu@123
+    url: jdbc:mysql://localhost:3306/balu36
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 9090

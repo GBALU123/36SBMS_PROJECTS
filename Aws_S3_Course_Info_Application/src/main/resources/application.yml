@@ -1,0 +1,26 @@
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAZQ3DRKZW3ZI6UYMQ
+      secretKey: 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
+      
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+    bucket:
+      name: myfirst703639
+
+server:
+  port: 9090
+spring:
+  application:
+    name: Aws_S3_Course_Info_Application
+  datasource:
+    password: Balu@123
+    url: jdbc:mysql://localhost:3306/balu36
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

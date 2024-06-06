@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "spring.db1.datasource.username",
+  "type": "java.lang.String",
+  "description": "A description for 'spring.db1.datasource.username'"
+}]}
