@@ -1,0 +1,22 @@
+package in.ashokit.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Service
+public class QuotesService {
+
+	private final String QUOTES_URL= "https://type.fit/api/quotes";
+	
+	public void  getQuotes() {
+		
+		WebClient client = WebClient.create();
+		
+		client.get()
+		      .uri(QUOTES_URL) 
+		      .retrieve()
+		      .bodyToMono(String.class);
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package in.ashokit.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeController {
+
+	
+	public String getWelcomeMsg() {
+		
+		String msg = "Welcome to Ashok It";
+		return msg;
+		
+	}
+}

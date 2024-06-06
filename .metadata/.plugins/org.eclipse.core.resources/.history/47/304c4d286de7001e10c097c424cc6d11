@@ -1,0 +1,42 @@
+package in.ashokit.service;
+
+import org.springframework.stereotype.Service;
+
+import in.ashokit.entity.Address;
+import in.ashokit.entity.Employee;
+import in.ashokit.repo.AddrRepo;
+import in.ashokit.repo.EmployeeRepo;
+
+
+@Service
+public class EmployeeService {
+
+	private EmployeeRepo empRepo;
+	private AddrRepo addRepo;
+	public EmployeeService(EmployeeRepo empRepo, AddrRepo addRepo) {
+		super();
+		this.empRepo = empRepo;
+		this.addRepo = addRepo;
+	}
+	
+	public void saveData() {
+		
+		Employee emp = new Employee();
+		emp.setEname("balu");
+		emp.setEsal(20000.00);
+		
+		Employee savedEntity = empRepo.save(emp);
+		int i = 10/0;
+		
+		Address addr = new Address();
+		addr.setCity("hyd");
+		addr.setState("TS");
+		addr.setCountry("ind");
+		addr.setType("permanent");
+		addr.setEmpid(savedEntity.getEid());
+		addRepo.save(addr);
+	}
+	
+	
+	
+}

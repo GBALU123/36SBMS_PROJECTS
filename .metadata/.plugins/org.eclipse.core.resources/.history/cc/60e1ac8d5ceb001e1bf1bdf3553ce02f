@@ -1,0 +1,48 @@
+package in.balu.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import in.balu.entity.Book;
+import in.balu.service.BookServiceImpl;
+
+@Controller
+public class BookController {
+
+	@Autowired
+	private BookServiceImpl service;
+	
+	@GetMapping("/index")
+	public ModelAndView index() {
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index");
+		return mav;
+		
+	}
+	
+	@PostMapping("/book")
+	public ModelAndView saveBook(Book book) {
+		ModelAndView mav = new ModelAndView();
+		System.out.println(book);
+		mav.setViewName("index");
+		return mav;
+		
+	}
+	@GetMapping("/view")
+	public ModelAndView getallbooks() {
+		ModelAndView mav = new ModelAndView();
+		List<Book> list = service.getRecords();
+		System.out.println(list.size());
+		mav.addObject("books", list);
+		mav.setViewName("booksview");
+		return mav;
+
+	}
+
+}

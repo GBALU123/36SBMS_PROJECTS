@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;08_Data_Jpa_Crud_Repo_Insert_Queries&apos;&#x0D;&#x0A;- Original project: &apos;08_Data_Jpa_Crud_Repo_Insert_Queries&apos;&#x0D;&#x0A;- Original element: &apos;08_Data_Jpa_Crud_Repo_Insert_Queries/src/main/java/in.ashokit.service&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.service" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1710587154273" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,27 @@
+package in.ashokit.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import reactor.core.publisher.Mono;
+
+@Service
+public class QuotesService {
+
+	private  static final String QUOTES_URL= "https://type.fit/api/quotes";
+	
+	public void  getQuotes() {
+		
+		WebClient client = WebClient.create();
+		System.out.println("Rest api call started..");
+		
+		Mono<String> bodyToMono = client.get()
+		      .uri(QUOTES_URL) 
+		      .retrieve()
+		      .bodyToMono(String.class);
+		
+		System.out.println(bodyToMono.block());
+		
+	}
+	
+}
